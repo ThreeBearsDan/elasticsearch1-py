@@ -4,18 +4,18 @@ Transport classes
 =================
 
 List of transport classes that can be used, simply import your choice and pass
-it to the constructor of :class:`~elasticsearch.Elasticsearch` as
+it to the constructor of :class:`~elasticsearch1.Elasticsearch` as
 `connection_class`. Note that the
-:class:`~elasticsearch.connection.RequestsHttpConnection` requires ``requests``
+:class:`~elasticsearch1.connection.RequestsHttpConnection` requires ``requests``
 to be installed.
 
 For example to use the ``requests``-based connection just import it and use it::
 
-    from elasticsearch import Elasticsearch, RequestsHttpConnection
+    from elasticsearch1 import Elasticsearch, RequestsHttpConnection
     es = Elasticsearch(connection_class=RequestsHttpConnection)
 
 
-.. py:module:: elasticsearch.connection
+.. py:module:: elasticsearch1.connection
 
 Connection
 ----------

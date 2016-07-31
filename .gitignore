@@ -1,11 +1,12 @@
 .*.swp
 *~
 *.py[co]
+.idea
 .coverage
 test_elasticsearch/cover
 test_elasticsearch/local.py
 docs/_build
-elasticsearch.egg-info
+elasticsearch1.egg-info
 .tox
 dist
 *.egg

@@ -45,7 +45,7 @@ def fetch_es_repo():
 
     # fetch new commits to be sure...
     print('Fetching elasticsearch repo...')
-    subprocess.check_call('cd %s && git fetch https://github.com/elasticsearch/elasticsearch.git' % repo_path, shell=True)
+    subprocess.check_call('cd %s && git fetch https://github.com/elastic/elasticsearch.git' % repo_path, shell=True)
     # reset to the version fron info()
     subprocess.check_call('cd %s && git reset --hard %s' % (repo_path, sha), shell=True)
 
@@ -59,8 +59,8 @@ def run_all(argv=None):
     if argv is None:
         argv = [
             'nosetests', '--with-xunit',
-            '--with-xcoverage', '--cover-package=elasticsearch', '--cover-erase',
-            '--logging-filter=elasticsearch', '--logging-level=DEBUG',
+            '--with-xcoverage', '--cover-package=elasticsearch1', '--cover-erase',
+            '--logging-filter=elasticsearch1', '--logging-level=DEBUG',
             '--verbose',
         ]
 

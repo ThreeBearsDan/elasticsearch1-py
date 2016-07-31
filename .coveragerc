@@ -6,4 +6,4 @@ omit =
     */site-packages/*
     *.egg/*
     test_elasticsearch/*
-    elasticsearch/connection/esthrift/*
+    elasticsearch1/connection/esthrift/*

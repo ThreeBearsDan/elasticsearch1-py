@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-from elasticsearch.client import _normalize_hosts, Elasticsearch
+from elasticsearch1.client import _normalize_hosts, Elasticsearch
 
 from ..test_cases import TestCase, ElasticsearchTestCase
 

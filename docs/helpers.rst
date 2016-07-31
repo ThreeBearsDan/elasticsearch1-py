@@ -20,7 +20,7 @@ loading them into memory).
 
 The items in the ``action`` iterable should be the documents we wish to index
 in several formats. The most common one is the same  as returned by
-:meth:`~elasticsearch.Elasticsearch.search`, for example:
+:meth:`~elasticsearch1.Elasticsearch.search`, for example:
 
 .. code:: python
 
@@ -48,7 +48,7 @@ from the doc and use the rest as the document data:
         "body": "..."
     }
 
-The :meth:`~elasticsearch.Elasticsearch.bulk` api accepts ``index``, ``create``,
+The :meth:`~elasticsearch1.Elasticsearch.bulk` api accepts ``index``, ``create``,
 ``delete``, and ``update`` actions. Use the ``_op_type`` field to specify an
 action (``_op_type`` defaults to ``index``):
 
@@ -78,7 +78,7 @@ action (``_op_type`` defaults to ``index``):
     as-is.
 
 
-.. py:module:: elasticsearch.helpers
+.. py:module:: elasticsearch1.helpers
 
 .. autofunction:: streaming_bulk
 
