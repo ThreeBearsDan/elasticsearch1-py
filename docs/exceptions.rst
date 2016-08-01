@@ -3,7 +3,7 @@
 Exceptions
 ==========
 
-.. py:module:: elasticsearch
+.. py:module:: elasticsearch1
 
 .. autoclass:: ImproperlyConfigured
 

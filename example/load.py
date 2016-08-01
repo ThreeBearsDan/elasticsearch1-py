@@ -9,8 +9,8 @@ import logging
 
 import git
 
-from elasticsearch import Elasticsearch
-from elasticsearch.helpers import bulk, streaming_bulk
+from elasticsearch1 import Elasticsearch
+from elasticsearch1.helpers import bulk, streaming_bulk
 
 def create_git_index(client, index):
     # we will use user on several places
@@ -166,7 +166,7 @@ REPO_ACTIONS = [
 
 if __name__ == '__main__':
     # get trace logger and set level
-    tracer = logging.getLogger('elasticsearch.trace')
+    tracer = logging.getLogger('elasticsearch1.trace')
     tracer.setLevel(logging.INFO)
     tracer.addHandler(logging.FileHandler('/tmp/es_trace.log'))
 

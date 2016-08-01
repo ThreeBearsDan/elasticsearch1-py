@@ -5,21 +5,21 @@ Connection Layer API
 
 All of the classes reponsible for handling the connection to the Elasticsearch
 cluster. The default subclasses used can be overriden by passing parameters to the
-:class:`~elasticsearch.Elasticsearch` class. All of the arguments to the client
-will be passed on to :class:`~elasticsearch.Transport`,
-:class:`~elasticsearch.ConnectionPool` and :class:`~elasticsearch.Connection`.
+:class:`~elasticsearch1.Elasticsearch` class. All of the arguments to the client
+will be passed on to :class:`~elasticsearch1.Transport`,
+:class:`~elasticsearch1.ConnectionPool` and :class:`~elasticsearch1.Connection`.
 
 For example if you wanted to use your own implementation of the
-:class:`~elasticsearch.ConnectionSelector` class you can just pass in the
+:class:`~elasticsearch1.ConnectionSelector` class you can just pass in the
 ``selector_class`` parameter.
 
 .. note::
 
-  :class:`~elasticsearch.ConnectionPool` and related options (like
+  :class:`~elasticsearch1.ConnectionPool` and related options (like
   ``selector_class``) will only be used if more than one connection is defined.
   Either directly or via the :ref:`sniffing` mechanism.
 
-.. py:module:: elasticsearch
+.. py:module:: elasticsearch1
 
 Transport
 ---------

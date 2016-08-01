@@ -12,12 +12,12 @@ from .nodes import NodesClient
 from .snapshot import SnapshotClient
 from .utils import query_params, _make_path, SKIP_IN_PATH
 
-logger = logging.getLogger('elasticsearch')
+logger = logging.getLogger('elasticsearch1')
 
 def _normalize_hosts(hosts):
     """
     Helper function to transform hosts argument to
-    :class:`~elasticsearch.Elasticsearch` to a list of dicts.
+    :class:`~elasticsearch1.Elasticsearch` to a list of dicts.
     """
     # if hosts are empty, just defer to defaults down the line
     if hosts is None:
@@ -66,11 +66,11 @@ class Elasticsearch(object):
 
     The instance has attributes ``cat``, ``cluster``, ``indices``, ``nodes``
     and ``snapshot`` that provide access to instances of
-    :class:`~elasticsearch.client.CatClient`,
-    :class:`~elasticsearch.client.ClusterClient`,
-    :class:`~elasticsearch.client.IndicesClient`,
-    :class:`~elasticsearch.client.NodesClient` and
-    :class:`~elasticsearch.client.SnapshotClient` respectively. This is the
+    :class:`~elasticsearch1.client.CatClient`,
+    :class:`~elasticsearch1.client.ClusterClient`,
+    :class:`~elasticsearch1.client.IndicesClient`,
+    :class:`~elasticsearch1.client.NodesClient` and
+    :class:`~elasticsearch1.client.SnapshotClient` respectively. This is the
     preferred (and only supported) way to get access to those classes and their
     methods.
 
@@ -81,7 +81,7 @@ class Elasticsearch(object):
         es = Elasticsearch(connection_class=ThriftConnection)
 
     If you want to turn on :ref:`sniffing` you have several options (described
-    in :class:`~elasticsearch.Transport`)::
+    in :class:`~elasticsearch1.Transport`)::
 
         # create connection that will automatically inspect the cluster to get
         # the list of active nodes. Start with nodes running on 'esnode1' and
@@ -107,7 +107,7 @@ class Elasticsearch(object):
         ])
 
     If using SSL, there are several parameters that control how we deal with
-    certificates (see :class:`~elasticsearch.Urllib3HttpConnection` for
+    certificates (see :class:`~elasticsearch1.Urllib3HttpConnection` for
     detailed description of the options)::
 
         es = Elasticsearch(
@@ -136,16 +136,16 @@ class Elasticsearch(object):
         """
         :arg hosts: list of nodes we should connect to. Node should be a
             dictionary ({"host": "localhost", "port": 9200}), the entire dictionary
-            will be passed to the :class:`~elasticsearch.Connection` class as
+            will be passed to the :class:`~elasticsearch1.Connection` class as
             kwargs, or a string in the format of ``host[:port]`` which will be
             translated to a dictionary automatically.  If no value is given the
-            :class:`~elasticsearch.Urllib3HttpConnection` class defaults will be used.
+            :class:`~elasticsearch1.Urllib3HttpConnection` class defaults will be used.
 
-        :arg transport_class: :class:`~elasticsearch.Transport` subclass to use.
+        :arg transport_class: :class:`~elasticsearch1.Transport` subclass to use.
 
         :arg kwargs: any additional arguments will be passed on to the
-            :class:`~elasticsearch.Transport` class and, subsequently, to the
-            :class:`~elasticsearch.Connection` instances.
+            :class:`~elasticsearch1.Transport` class and, subsequently, to the
+            :class:`~elasticsearch1.Connection` instances.
         """
         self.transport = transport_class(_normalize_hosts(hosts), **kwargs)
 
@@ -758,7 +758,7 @@ class Elasticsearch(object):
         """
         Perform many index/delete operations in a single API call.
 
-        See the :func:`~elasticsearch.helpers.bulk` helper function for a more
+        See the :func:`~elasticsearch1.helpers.bulk` helper function for a more
         friendly API.
         `<http://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html>`_
 

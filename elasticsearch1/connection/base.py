@@ -6,12 +6,12 @@ except ImportError:
 
 from ..exceptions import TransportError, HTTP_EXCEPTIONS
 
-logger = logging.getLogger('elasticsearch')
+logger = logging.getLogger('elasticsearch1')
 
 # create the elasticsearch.trace logger, but only set propagate to False if the
 # logger hasn't already been configured
-_tracer_already_configured = 'elasticsearch.trace' in logging.Logger.manager.loggerDict
-tracer = logging.getLogger('elasticsearch.trace')
+_tracer_already_configured = 'elasticsearch1.trace' in logging.Logger.manager.loggerDict
+tracer = logging.getLogger('elasticsearch1.trace')
 if not _tracer_already_configured:
     tracer.propagate = False
 

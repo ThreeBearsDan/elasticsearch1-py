@@ -9,7 +9,7 @@ except ImportError:
 
 from .exceptions import ImproperlyConfigured
 
-logger = logging.getLogger('elasticsearch')
+logger = logging.getLogger('elasticsearch1')
 
 class ConnectionSelector(object):
     """
@@ -20,7 +20,7 @@ class ConnectionSelector(object):
     *currently* live connections to choose from.
 
     The options dictionary is the one that has been passed to
-    :class:`~elasticsearch.Transport` as `hosts` param and the same that is
+    :class:`~elasticsearch1.Transport` as `hosts` param and the same that is
     used to construct the Connection object itself. When the Connection was
     created from information retrieved from the cluster via the sniffing
     process it will be the dictionary returned by the `host_info_callback`.
@@ -67,11 +67,11 @@ class RoundRobinSelector(ConnectionSelector):
 
 class ConnectionPool(object):
     """
-    Container holding the :class:`~elasticsearch.Connection` instances,
+    Container holding the :class:`~elasticsearch1.Connection` instances,
     managing the selection process (via a
-    :class:`~elasticsearch.ConnectionSelector`) and dead connections.
+    :class:`~elasticsearch1.ConnectionSelector`) and dead connections.
 
-    It's only interactions are with the :class:`~elasticsearch.Transport` class
+    It's only interactions are with the :class:`~elasticsearch1.Transport` class
     that drives all the actions within `ConnectionPool`.
 
     Initially connections are stored on the class as a list and, along with the
@@ -91,12 +91,12 @@ class ConnectionPool(object):
         selector_class=RoundRobinSelector, randomize_hosts=True, **kwargs):
         """
         :arg connections: list of tuples containing the
-            :class:`~elasticsearch.Connection` instance and it's options
+            :class:`~elasticsearch1.Connection` instance and it's options
         :arg dead_timeout: number of seconds a connection should be retired for
             after a failure, increases on consecutive failures
         :arg timeout_cutoff: number of consecutive failures after which the
             timeout doesn't increase
-        :arg selector_class: :class:`~elasticsearch.ConnectionSelector`
+        :arg selector_class: :class:`~elasticsearch1.ConnectionSelector`
             subclass to use if more than one connection is live
         :arg randomize_hosts: shuffle the list of connections upon arrival to
             avoid dog piling effect across processes

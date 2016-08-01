@@ -26,13 +26,13 @@ Ignore
 
 An API call is considered successful (and will return a response) if
 elasticsearch returns a 2XX response. Otherwise an instance of
-:class:`~elasticsearch.TransportError` (or a more specific subclass) will be
+:class:`~elasticsearch1.TransportError` (or a more specific subclass) will be
 raised. You can see other exception and error states in :ref:`exceptions`. If
 you do not wish an exception to be raised you can always pass in an ``ignore``
 parameter with either a single status code that should be ignored or a list of
 them::
 
-    from elasticsearch import Elasticsearch
+    from elasticsearch1 import Elasticsearch
     es = Elasticsearch()
 
     # ignore 400 cause by IndexAlreadyExistsException when creating an index
@@ -46,7 +46,7 @@ Timeout
 ~~~~~~~
 
 Global timeout can be set when constructing the client (see
-:class:`~elasticsearch.Connection`'s ``timeout`` parameter) or on a per-request
+:class:`~elasticsearch1.Connection`'s ``timeout`` parameter) or on a per-request
 basis using ``request_timeout`` (float value in seconds) as part of any API
 call, this value will get passed to the ``perform_request`` method of the
 connection class::
@@ -61,7 +61,7 @@ connection class::
     request will end in the specified time.
 
 
-.. py:module:: elasticsearch
+.. py:module:: elasticsearch1
 
 Elasticsearch
 -------------
@@ -69,7 +69,7 @@ Elasticsearch
 .. autoclass:: Elasticsearch
    :members:
 
-.. py:module:: elasticsearch.client
+.. py:module:: elasticsearch1.client
 
 Indices
 -------

@@ -68,7 +68,7 @@ class CatClient(NamespacedClient):
     def health(self, params=None):
         """
         health is a terse, one-line representation of the same information from
-        :meth:`~elasticsearch.client.cluster.ClusterClient.health` API
+        :meth:`~elasticsearch1.client.cluster.ClusterClient.health` API
         `<http://www.elastic.co/guide/en/elasticsearch/reference/current/cat-health.html>`_
 
         :arg h: Comma-separated list of column names to display
@@ -215,7 +215,7 @@ class CatClient(NamespacedClient):
     def pending_tasks(self, params=None):
         """
         pending_tasks provides the same information as the
-        :meth:`~elasticsearch.client.cluster.ClusterClient.pending_tasks` API
+        :meth:`~elasticsearch1.client.cluster.ClusterClient.pending_tasks` API
         in a convenient tabular format.
         `<http://www.elastic.co/guide/en/elasticsearch/reference/current/cat-pending-tasks.html>`_
 
